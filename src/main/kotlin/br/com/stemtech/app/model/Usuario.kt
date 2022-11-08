@@ -8,7 +8,7 @@ data class Usuario(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_usuario")
-    private val id: Long,
+    val id: Long,
 
     @Column(name = "nm_usuario", nullable = false)
     private val nome: String,
@@ -24,7 +24,7 @@ data class Usuario(
 
     @ManyToMany(cascade = [CascadeType.ALL], fetch = FetchType.EAGER)
     @Column(name = "ds_cursos")
-    private val curso: List<Curso>
+    private val cursos: List<Curso>?
 )
 
 

@@ -6,4 +6,5 @@ data class CursoDto(
     private val nome: String,
     private val formacao: String,
     private val categoria: Categoria
+
 )

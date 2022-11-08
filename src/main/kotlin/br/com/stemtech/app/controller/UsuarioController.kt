@@ -14,14 +14,12 @@ import java.net.URI
 import javax.transaction.Transactional
 import javax.validation.Valid
 
-
 @RestController
 @RequestMapping("/usuario")
 class UsuarioController(
     @Autowired
     private val usuarioRepository: UsuarioRepository
 ) {
-
     @PostMapping
     @Transactional
     fun cadastra(

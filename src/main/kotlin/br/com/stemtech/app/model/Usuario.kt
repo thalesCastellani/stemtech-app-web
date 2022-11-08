@@ -8,7 +8,7 @@ data class Usuario(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_usuario")
-    val id: Long,
+    val id: Long? = null,
 
     @Column(name = "nm_usuario", nullable = false)
     private val nome: String,

@@ -8,16 +8,16 @@ data class Curso(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_curso")
-    private val id: Long,
+    val id: Long,
 
     @Column(name = "nm_curso")
-    private val nome: String?,
+    val nome: String?,
 
     @Column(name = "nm_formacao")
-    private val formacao: String?,
+    val formacao: String?,
 
     @Column(name = "tp_categoria")
     @Enumerated(EnumType.STRING)
-    private val categoria: Categoria?
+    val categoria: Categoria?
 )
 

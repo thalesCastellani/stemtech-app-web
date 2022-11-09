@@ -23,7 +23,8 @@ class UsuarioController(
     @PostMapping
     @Transactional
     fun cadastra(
-        @RequestBody @Valid usuarioDto: UsuarioDto,
+        @RequestBody @Valid
+        usuarioDto: UsuarioDto,
         uriComponentsBuilder: UriComponentsBuilder
     ): ResponseEntity<Usuario> {
         val usuario: Usuario = usuarioDto.converte(usuarioDto)
